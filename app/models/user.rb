@@ -4,8 +4,8 @@ class User < ApplicationRecord
   # has_many :moderate_posts, class: 'Post', foreign_key: 'moderate_post_id'
   # has_one :commentary
 
-  validates :name, presence: true
+  validates_presence_of :name, :email
   # validates :name, length: { maximum: 16, minimum: 2 }
-  validates :name, uniqueness: true
+  validates_uniqueness_of :name, :email
   # validates :name, format: { with: /\A\w+\z/i, message: ': допускаются только буквы и цифры' }
 end

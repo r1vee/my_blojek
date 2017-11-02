@@ -11,10 +11,15 @@ Post.destroy_all
 Commentary.destroy_all
 
 hash_users = 10.times.map do
-  { name: FFaker::Internet.user_name }
+  { 
+    name: FFaker::Internet.user_name,
+    email: FFaker::Internet.email
+  }
 end
 
 users = User.create! hash_users
+
+
 
 # binding.pry
 

@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20171026184314) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name",                       null: false
+    t.string   "email",                      null: false
     t.boolean  "moderator",  default: false, null: false
     t.boolean  "creator",    default: false, null: false
     t.boolean  "active",     default: true,  null: false
