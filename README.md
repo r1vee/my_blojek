@@ -1,3 +1,3 @@
 # README
 
-Ruby on Rails application
+Ruby on Rails application# my_blojek
