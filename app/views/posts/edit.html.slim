@@ -1,0 +1,11 @@
+- content_for :header do
+  h1 Editing post
+
+== render 'form'
+
+.is_small_page
+  .down_link
+    => link_to 'Show', @post
+  .down_link
+    =< link_to 'Back', posts_path
+

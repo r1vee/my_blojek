@@ -1,14 +1,17 @@
 doctype html
 html
   head
+    meta charset="utf-8"
     title
       | MyBlojek
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
   body
-    p
-      | Шапка
-    = yield
-    p
-      | Футер
+    .container
+      header
+        = yield :header
+      = yield
+      footer
+        h5
+          | © copyright my_blojek
