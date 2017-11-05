@@ -1,14 +1,9 @@
-$color_1: #FFF500;
-$color_2: #000000;
-$color_3: #ffffff;
-$color_4: #464646;
-$color_5: #6A6969;
+
+$color_1: #000000;
+$color_2: #ffffff;
 $background_color_1: #f8f8f8;
-$background_color_2: #FFF500;
-$background_color_3: #26d2fc;
-$background_color_4: #000000;
-$background_color_5: #373737;
-$background_color_6: #ffffff;
+$background_color_2: #26d2fc;
+$background_color_3: #373737;
 @charset "utf-8";
 * {
   margin: 0;
@@ -35,7 +30,7 @@ font: normal 32px "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Hel
 }
 a {
   font: italic 14px "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: $color_2;
+  color: $color_1;
   text-align: center;
   text-decoration: none;
 }
@@ -74,7 +69,7 @@ th {
     input {
       position: relative;
       left: 20px;
-      background-color: $background_color_3;
+      background-color: $background_color_2;
       height: 30px;
       width: 200px;
       border: 0;
@@ -94,14 +89,14 @@ th {
   display: block;
   height: 20px;
   width: 80px;
-  background-color: $background_color_3;
+  background-color: $background_color_2;
   text-align: center;
 }
 footer {
   margin-top: 150px;
   height: 100px;
-  background-color: $background_color_5;
-  color: $color_3;
+  background-color: $background_color_3;
+  color: $color_2;
 }
 h5 {
   position: relative;
