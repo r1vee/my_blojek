@@ -18,9 +18,9 @@ p
         td = commentary.body
 
 
-
-.down_link
-  => link_to 'Edit', edit_post_path(@post)
+- if current_user&.moderator?
+  .down_link
+    => link_to 'Edit', edit_post_path(@post)
 .down_link
   =< link_to 'Back', posts_path
 
