@@ -1,0 +1,6 @@
+ru:
+  label:
+    hello: 'Привет, %{name}'
+    sign_in: 'Вход'
+    sign_up: 'Регистрация'
+    sign_out: 'Выход'

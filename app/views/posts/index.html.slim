@@ -8,8 +8,9 @@ table
       th User
       th Active
       th
-      th
-      th
+      = if current_user&.moderator?
+        th
+        th
 
   tbody
     - @posts.each do |post|
@@ -18,10 +19,16 @@ table
         td = post.user.name
         td = post.active
         td = link_to 'Show', post
-        td = link_to 'Edit', edit_post_path(post)
-        td = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
+        = if current_user&.moderator?
+          td = link_to 'Edit', edit_post_path(post)
+          td = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
 
 br
 
 .down_link
   = link_to 'New Post', new_post_path
+
+br
+br
+br
+= will_paginate @posts

@@ -1,10 +1,15 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :build_post, only: :new
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action except: [:index, :show] do
+    raise 'Пользователь не является модератором' unless current_user.moderator?
+  end
 
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.includes(:user).paginate(page: params[:page], per_page: 10)
   end
 
   # GET /posts/1
