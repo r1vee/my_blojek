@@ -29,8 +29,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'slim-rails'
 gem 'will_paginate'
 gem 'devise'
-# gem 'omniauth-facebook'
-# gem 'omniauth-vkontakte'
+gem 'omniauth-facebook'
+gem 'omniauth-vkontakte'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

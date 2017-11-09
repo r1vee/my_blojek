@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171109074647) do
+ActiveRecord::Schema.define(version: 20171109132833) do
 
   create_table "commentaries", force: :cascade do |t|
     t.text     "body"
@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(version: 20171109074647) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "provider"
+    t.string   "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["name"], name: "index_users_on_name", unique: true
   end

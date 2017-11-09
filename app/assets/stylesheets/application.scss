@@ -4,6 +4,7 @@ $color_2: #ffffff;
 $background_color_1: #f8f8f8;
 $background_color_2: #26d2fc;
 $background_color_3: #373737;
+$background_color_4: #1E90FF;
 @charset "utf-8";
 * {
   margin: 0;
@@ -38,6 +39,22 @@ li {
   margin: 10px;
   display: block;
 
+}
+.social {
+  position: relative;
+  float: left;
+  left: 30px;
+  padding: 10px;
+  margin-left: 10px;
+  display: block;
+  height: 20px;
+  width: 180px;
+  background-color: $background_color_4;
+  text-align: center; 
+  a {
+    color: $color_2;
+    font: 16px "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
 }
 a {
   font: italic 14px "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;

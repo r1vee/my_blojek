@@ -8,7 +8,7 @@ table
       th User
       th Active
       th
-      = if current_user&.moderator?
+      - if current_user&.moderator? 
         th
         th
 
@@ -19,14 +19,14 @@ table
         td = post.user.name
         td = post.active
         td = link_to 'Show', post
-        = if current_user&.moderator?
+        - if current_user&.moderator?
           td = link_to 'Edit', edit_post_path(post)
           td = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
 
 br
-
-.down_link
-  = link_to 'New Post', new_post_path
+- if current_user&.moderator?
+  .down_link
+    = link_to 'New Post', new_post_path
 
 br
 br
