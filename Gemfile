@@ -31,6 +31,7 @@ gem 'will_paginate'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'omniauth-vkontakte'
+gem 'jquery-validation-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

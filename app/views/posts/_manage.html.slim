@@ -1,0 +1,4 @@
+td = link_to 'Show', post
+- if current_user&.moderator?
+  td = link_to 'Edit', edit_post_path(post)
+  td = link_to 'Destroy', post_path(id: post, format: :json), method: :delete, remote: true

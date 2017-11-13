@@ -1,6 +1,6 @@
 - content_for :header do
   h1 Listing posts
-
+p#notice = notice
 table
   thead
     tr
@@ -11,23 +11,12 @@ table
       - if current_user&.moderator? 
         th
         th
-
   tbody
-    - @posts.each do |post|
-      tr
-        td = post.body
-        td = post.user.name
-        td = post.active
-        td = link_to 'Show', post
-        - if current_user&.moderator?
-          td = link_to 'Edit', edit_post_path(post)
-          td = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
-
+    = render partial: 'post', collection: @posts
 br
 - if current_user&.moderator?
   .down_link
     = link_to 'New Post', new_post_path
-
 br
 br
 br

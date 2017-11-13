@@ -1,0 +1,31 @@
+a {
+  font: italic 14px "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $color_1;
+  text-align: center;
+  text-decoration: none;
+}
+.down_link {
+  position: relative;
+  float: left;
+  left: 30px;
+  padding: 10px;
+  margin-left: 10px;
+  display: block;
+  height: 20px;
+  width: 75px;
+  background-color: $background_color_2;
+  text-align: center;
+}
+.pagination {
+  font: italic 14px "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  float: left;
+  left: 30px;
+  padding: 10px;
+  margin-left: 10px;
+  display: block;
+  height: 20px;
+  width: 200px;
+  background-color: $background_color_2;
+  text-align: center;
+}

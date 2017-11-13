@@ -13,5 +13,6 @@ module MyBlojek
     # -- all .rb files in that directory are automatically loaded.
     I18n.available_locales = [:en, :ru]
     I18n.default_locale = :ru
+    config.web_console.whitelisted_ips = '192.168.5.1/255.255.255.0'
   end
 end

@@ -1,0 +1,27 @@
+.button_to {
+  input {
+    position: relative;
+    left: 40px;
+    background-color: $background_color_2;
+    height: 30px;
+    width: 200px;
+    border: 0;
+    margin: 0
+  }
+}
+.social {
+  position: relative;
+  float: left;
+  left: 30px;
+  padding: 10px;
+  margin-left: 10px;
+  display: block;
+  height: 20px;
+  width: 180px;
+  background-color: $background_color_4;
+  text-align: center; 
+  a {
+    color: $color_2;
+    font: 16px "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+}
