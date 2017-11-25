@@ -6,12 +6,16 @@
 #
 default: &default
   adapter: postgresql
-  pool: 5
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
   timeout: 5000
 
 development:
   <<: *default
   database: my_blojek_dev
+  username: postgres
+  password: 4sqlc0ntr0l
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -19,8 +23,14 @@ development:
 test:
   <<: *default
   database: my_blojek_test
+  username: postgres
+  password: 4sqlc0ntr0l
 
 
 production:
   <<: *default
   database: my_blojek_prod
+  username: my_blojek_prod
+  password: <%= ENV["SECRET_KEY_BASE"] %>
+
+  

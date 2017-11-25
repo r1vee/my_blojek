@@ -251,9 +251,9 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  config.omniauth :facebook, "1890856491232679", "60f922ab2e07a41978866385120befcc"
-  config.omniauth :vkontakte, "6254930", "AMgRvaY0jzU6xakZEjOv"
-
+  config.omniauth :facebook, "1890856491232679", Rails.application.secrets.facebook_app_secret
+  config.omniauth :vkontakte, "6254930", Rails.application.secrets.vkontakte_app_secret
+ 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
