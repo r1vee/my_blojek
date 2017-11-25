@@ -62,5 +62,3 @@ public/assets/*
 .sass-cache/
 
 .DS_Store
-
-config/secrets.yml
